@@ -3,7 +3,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def funcLogin(request):
-    return HttpResponse('informe seus dados')
+    return render(request, 'login.html' )
 
 def pagHome(request):
-    return HttpResponse('Essa é a nova home - pesquise prova')
+    return render(request, 'home.html', context={
+        'nome': 'fabio',
+        'salario':100000
+    })
