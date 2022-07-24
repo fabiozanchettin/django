@@ -3,10 +3,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def funcLogin(request):
-    return render(request, 'login.html' )
+    return render(request, 'pages/login.html' )
 
 def pagHome(request):
-    return render(request, 'home.html', context={
-        'nome': 'fabio',
+    return render(request, 'pages/home.html', context={
+        'nome': 'FADIR',
         'salario':100000
     })
